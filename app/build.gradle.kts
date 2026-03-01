@@ -3,8 +3,10 @@ plugins {
     id ("application")
 }
 
-application {
-    mainClass = "hexlet.code.App" // Замените на ваш пакет и класс
+application { mainClass.set("hexlet.code.App") }
+
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
 }
 
 group = "hexlet.code"
