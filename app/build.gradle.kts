@@ -1,9 +1,19 @@
 plugins {
     id("java")
     id ("application")
+    id("org.sonarqube") version "7.2.3.7755"
 }
 
-application { mainClass.set("hexlet.code.App") }
+sonar {
+    properties {
+        property("sonar.projectKey", "Artem-Maksimenko09_java-project-61")
+        property("sonar.organization", "artem-maksimenko09")
+    }
+}
+
+application {
+    mainClass.set("hexlet.code.App")
+}
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
