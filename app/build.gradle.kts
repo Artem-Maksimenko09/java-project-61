@@ -5,6 +5,10 @@ plugins {
     checkstyle
 }
 
+checkstyle {
+    toolVersion = "10.12.4"
+}
+
 sonar {
     properties {
         property("sonar.projectKey", "Artem-Maksimenko09_java-project-61")
