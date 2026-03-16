@@ -5,6 +5,13 @@ import java.util.Random;
 
 public class Even {
     public static void even() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("May I have your name?");
+
+        String name = sc.nextLine();
+
+        System.out.println("Hello, " + name + "!");
+
         Scanner evenGame = new Scanner(System.in);
         Random random = new Random();
         int correctAnswer = 0;
@@ -24,13 +31,13 @@ public class Even {
             } else {
                 System.out.println("\'" + answer + "\' is wrong answer ;(. Correct answer was \'"
                         + evenCorrect + "\'.\n"
-                        + "Let's try again, " + "NAME" + "!");
+                        + "Let's try again, " + name + "!");
                 i += 2;
             }
         }
 
         if (correctAnswer == 3) {
-            System.out.println("Congratulations, NAME!");
+            System.out.println("Congratulations, " + name + "!");
         }
     }
 }

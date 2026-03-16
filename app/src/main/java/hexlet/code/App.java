@@ -18,7 +18,6 @@ public class App {
             Cli.gretting();
         } else if (num == 2) {
             System.out.println("Welcome to the Brain Games!");
-            Cli.gretting();
             Even.even();
         }
         numGame.close();
