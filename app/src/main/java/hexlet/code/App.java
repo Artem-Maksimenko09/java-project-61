@@ -1,9 +1,9 @@
 package hexlet.code;
 
-import hexlet.code.game.Calc;
-import hexlet.code.game.Even;
-
 import java.util.Scanner;
+
+import static hexlet.code.game.Calc.runCalc;
+import static hexlet.code.game.Even.runEven;
 
 
 public class App {
@@ -18,17 +18,18 @@ public class App {
         System.out.println("Your choice: " + num);
 
         switch (num) {
-            case "1":
+            case 1:
                 System.out.println("Welcome to the Brain Games!");
                 Cli.gretting();
                 break;
-            case "2":
-                System.out.println("Welcome to the Brain Games!");
-                Even.even();
+            case 2:
+                runEven();
                 break;
-            case "3":
-                System.out.println("Welcome to the Brain Games!");
-                Calc.calc();
+            case 3:
+                runCalc();
+                break;
+            default:
+                System.out.println("Invalid value");
         }
 
         numGame.close();
