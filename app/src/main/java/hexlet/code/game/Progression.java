@@ -11,7 +11,6 @@ public class Progression {
     public static final String PROGRESSIONRULES = "What number is missing in the progression?";
 
     public static String[] getProgression() {
-        //currentElement = start + index * step;
         Random random = new Random();
         int lengthProgression = random.nextInt(5, 11);
         String[] progressionArray = new String[lengthProgression];

@@ -5,6 +5,7 @@ import java.util.Scanner;
 import static hexlet.code.game.Calc.runCalc;
 import static hexlet.code.game.Even.runEven;
 import static hexlet.code.game.GCD.runGcd;
+import static hexlet.code.game.Prime.runPrime;
 import static hexlet.code.game.Progression.runProgression;
 
 
@@ -17,6 +18,7 @@ public class App {
                 + "3 - Calc\n"
                 + "4 - GCD\n"
                 + "5 - Progression\n"
+                + "6 - Prime\n"
                 + "0 - Exit");
         int num = numGame.nextInt();
         System.out.println("Your choice: " + num);
@@ -32,6 +34,8 @@ public class App {
             case 4:  runGcd();
                      break;
             case 5:  runProgression();
+                     break;
+            case 6:  runPrime();
                      break;
             default: break;
         }
