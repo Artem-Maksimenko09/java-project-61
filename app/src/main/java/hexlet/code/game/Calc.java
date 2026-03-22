@@ -12,15 +12,11 @@ public class Calc {
     public static String randomOperator() {
         Random random = new Random();
         int randomNumOperator = random.nextInt(3);
-        String operator = "";
-        switch (randomNumOperator) {
-            case 0:  operator = "+";
-                     break;
-            case 1:  operator = "-";
-                     break;
-            default: operator = "*";
-                     break;
-        }
+        String operator = switch (randomNumOperator) {
+            case 0 -> "+";
+            case 1 -> "-";
+            default -> "*";
+        };
         return operator;
     }
 
@@ -35,17 +31,17 @@ public class Calc {
             if (randomChar == "+") {
                 int correctAnswerInt = randomNumberOne + randomNumberTwo;
                 questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
-                        + "+" + randomNumberTwo);
+                        + " + " + randomNumberTwo);
                 questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
             } else if (randomChar == "-") {
                 int correctAnswerInt = randomNumberOne - randomNumberTwo;
                 questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
-                        + "-" + randomNumberTwo);
+                        + " - " + randomNumberTwo);
                 questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
             } else if (randomChar == "*") {
                 int correctAnswerInt = randomNumberOne * randomNumberTwo;
                 questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
-                        + "*" + randomNumberTwo);
+                        + " * " + randomNumberTwo);
                 questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
             }
         }
