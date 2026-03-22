@@ -35,11 +35,7 @@ public class Progression {
             int randomElement = random.nextInt(1, progressionArrayLength);
             questionAndAnswer[i][ANSWER] = progressionArray[randomElement];
             progressionArray[randomElement] = "..";
-            questionAndAnswer[i][QUESTION] = Arrays.toString(progressionArray);
-            questionAndAnswer[i][QUESTION] = questionAndAnswer[i][QUESTION]
-                    .replace('[', ' ')
-                    .replace(']', ' ')
-                    .replace(',', ' ');
+            questionAndAnswer[i][QUESTION] = String.join(" ", progressionArray);
         }
         return questionAndAnswer;
     }
