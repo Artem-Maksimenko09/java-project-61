@@ -5,6 +5,7 @@ import java.util.Scanner;
 import static hexlet.code.game.Calc.runCalc;
 import static hexlet.code.game.Even.runEven;
 import static hexlet.code.game.GCD.runGcd;
+import static hexlet.code.game.Progression.runProgression;
 
 
 public class App {
@@ -15,25 +16,24 @@ public class App {
                 + "2 - Even\n"
                 + "3 - Calc\n"
                 + "4 - GCD\n"
+                + "5 - Progression\n"
                 + "0 - Exit");
         int num = numGame.nextInt();
         System.out.println("Your choice: " + num);
 
         switch (num) {
-            case 1:
-                System.out.println("Welcome to the Brain Games!");
-                Cli.gretting();
-                break;
-            case 2:
-                runEven();
-                break;
-            case 3:
-                runCalc();
-                break;
-            case 4:
-                runGcd();
-            default:
-                break;
+            case 1:  System.out.println("Welcome to the Brain Games!");
+                     Cli.gretting();
+                     break;
+            case 2:  runEven();
+                     break;
+            case 3:  runCalc();
+                     break;
+            case 4:  runGcd();
+                     break;
+            case 5:  runProgression();
+                     break;
+            default: break;
         }
 
         numGame.close();

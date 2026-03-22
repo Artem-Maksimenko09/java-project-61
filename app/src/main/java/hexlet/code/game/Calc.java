@@ -14,15 +14,12 @@ public class Calc {
         int randomNumOperator = random.nextInt(3);
         String operator = "";
         switch (randomNumOperator) {
-            case 0:
-                operator = "+";
-                break;
-            case 1:
-                operator = "-";
-                break;
-            default:
-                operator = "*";
-                break;
+            case 0:  operator = "+";
+                     break;
+            case 1:  operator = "-";
+                     break;
+            default: operator = "*";
+                     break;
         }
         return operator;
     }
