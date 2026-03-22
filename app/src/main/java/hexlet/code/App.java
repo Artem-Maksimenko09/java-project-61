@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import static hexlet.code.game.Calc.runCalc;
 import static hexlet.code.game.Even.runEven;
+import static hexlet.code.game.GCD.runGcd;
 
 
 public class App {
@@ -13,6 +14,7 @@ public class App {
                 + "1 - Greet\n"
                 + "2 - Even\n"
                 + "3 - Calc\n"
+                + "4 - GCD\n"
                 + "0 - Exit");
         int num = numGame.nextInt();
         System.out.println("Your choice: " + num);
@@ -28,8 +30,10 @@ public class App {
             case 3:
                 runCalc();
                 break;
+            case 4:
+                runGcd();
             default:
-                System.out.println("Invalid value");
+                break;
         }
 
         numGame.close();
