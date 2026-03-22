@@ -1,6 +1,5 @@
 package hexlet.code.game;
 
-import java.util.Arrays;
 import java.util.Random;
 import static hexlet.code.Engine.ROUNDS;
 import static hexlet.code.Engine.QUESTION;
