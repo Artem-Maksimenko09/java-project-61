@@ -12,3 +12,4 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Artem-Maksimenko09_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Artem-Maksimenko09_java-project-61)
 Even Game - https://asciinema.org/a/KJX15KQSqqY4h0ut
 GCD Game - https://asciinema.org/a/LofxLcJ4C53aPrRW
+Progression Game - https://asciinema.org/a/pjEvrf1MTgHR3z7C
