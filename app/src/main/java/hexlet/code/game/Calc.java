@@ -30,17 +30,17 @@ public class Calc {
             int randomNumberOne = random.nextInt(MAXRANDOM);
             int randomNumberTwo = random.nextInt(MAXRANDOM);
             String randomChar = randomOperator();
-            if (randomChar == "+") {
+            if ("+".equals(randomChar)) {
                 int correctAnswerInt = randomNumberOne + randomNumberTwo;
                 questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
                         + " + " + randomNumberTwo);
                 questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
-            } else if (randomChar == "-") {
+            } else if ("-".equals(randomChar)) {
                 int correctAnswerInt = randomNumberOne - randomNumberTwo;
                 questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
                         + " - " + randomNumberTwo);
                 questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
-            } else if (randomChar == "*") {
+            } else if ("*".equals(randomChar)) {
                 int correctAnswerInt = randomNumberOne * randomNumberTwo;
                 questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
                         + " * " + randomNumberTwo);
