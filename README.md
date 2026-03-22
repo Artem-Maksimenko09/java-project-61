@@ -13,3 +13,4 @@
 Even Game - https://asciinema.org/a/KJX15KQSqqY4h0ut
 GCD Game - https://asciinema.org/a/LofxLcJ4C53aPrRW
 Progression Game - https://asciinema.org/a/pjEvrf1MTgHR3z7C
+Prime Game - https://asciinema.org/a/bBipAPqJtAiszM2b
