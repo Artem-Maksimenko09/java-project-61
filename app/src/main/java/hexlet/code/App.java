@@ -20,22 +20,22 @@ public class App {
                 + "5 - Progression\n"
                 + "6 - Prime\n"
                 + "0 - Exit");
-        int num = numGame.nextInt();
+        String num = String.valueOf(numGame.nextInt());
         System.out.println("Your choice: " + num);
 
         switch (num) {
-            case 1:  System.out.println("Welcome to the Brain Games!");
+            case "1":  System.out.println("Welcome to the Brain Games!");
                      Cli.gretting();
                      break;
-            case 2:  runEven();
+            case "2":  runEven();
                      break;
-            case 3:  runCalc();
+            case "3":  runCalc();
                      break;
-            case 4:  runGcd();
+            case "4":  runGcd();
                      break;
-            case 5:  runProgression();
+            case "5":  runProgression();
                      break;
-            case 6:  runPrime();
+            case "6":  runPrime();
                      break;
             default: break;
         }
