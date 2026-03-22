@@ -8,10 +8,12 @@ import static hexlet.code.Engine.engine;
 
 public class Calc {
     public static final String CALCRULES = "What is the result of the expression?";
+    public static final int MAXRANDOM = 20;
+    public static final int MAXRANDOMOPERATOR = 3;
 
     public static String randomOperator() {
         Random random = new Random();
-        int randomNumOperator = random.nextInt(3);
+        int randomNumOperator = random.nextInt(MAXRANDOMOPERATOR);
         String operator = switch (randomNumOperator) {
             case 0 -> "+";
             case 1 -> "-";
@@ -25,8 +27,8 @@ public class Calc {
         String[][] questionAndAnswer = new String[ROUNDS][2];
 
         for (var i = 0; i < ROUNDS; i++) {
-            int randomNumberOne = random.nextInt(20);
-            int randomNumberTwo = random.nextInt(20);
+            int randomNumberOne = random.nextInt(MAXRANDOM);
+            int randomNumberTwo = random.nextInt(MAXRANDOM);
             String randomChar = randomOperator();
             if (randomChar == "+") {
                 int correctAnswerInt = randomNumberOne + randomNumberTwo;

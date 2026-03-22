@@ -8,13 +8,14 @@ import static hexlet.code.Engine.engine;
 
 public class Even {
     public static final String EVENRULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static final int MAXRANDOM = 50;
 
     public static String[][] evenArray() {
         Random random = new Random();
         String[][] questionAndAnswer = new String[ROUNDS][2];
 
         for (var i = 0; i < ROUNDS; i++) {
-            int randomNumber = random.nextInt(50);
+            int randomNumber = random.nextInt(MAXRANDOM);
             String evenCorrect = randomNumber % 2 == 0 ? "yes" : "no";
             questionAndAnswer[i][QUESTION] = String.valueOf(randomNumber);
             questionAndAnswer[i][ANSWER] = evenCorrect;

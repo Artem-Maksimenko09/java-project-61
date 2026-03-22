@@ -9,13 +9,19 @@ import static hexlet.code.Engine.engine;
 
 public class Progression {
     public static final String PROGRESSIONRULES = "What number is missing in the progression?";
+    public static final int MINLENGTHPROGRESSION = 5;
+    public static final int MAXLENGTHPROGRESSION = 11;
+    public static final int MINSTARTPROGRESSION = 1;
+    public static final int MAXSTARTPROGRESSION = 5;
+    public static final int MINSTEPPROGRESSION = 3;
+    public static final int MAXSTEPPROGRESSION = 7;
 
     public static String[] getProgression() {
         Random random = new Random();
-        int lengthProgression = random.nextInt(5, 11);
+        int lengthProgression = random.nextInt(MINLENGTHPROGRESSION, MAXLENGTHPROGRESSION);
         String[] progressionArray = new String[lengthProgression];
-        int start = random.nextInt(1, 5);
-        int step = random.nextInt(3, 7);
+        int start = random.nextInt(MINSTARTPROGRESSION, MAXSTARTPROGRESSION);
+        int step = random.nextInt(MINSTEPPROGRESSION, MAXSTEPPROGRESSION);
         int nextElement = start;
 
         for (var i = 0; i < lengthProgression; i++) {
