@@ -15,7 +15,7 @@ public class Prime {
         } else if (randomNumber == 2) {
             return "yes";
         } else {
-            for (var i = 2; i * i < randomNumber; i++) {
+            for (var i = 2; i < randomNumber / 2; i++) {
                 if (randomNumber % i == 0) {
                     return "no";
                 }
