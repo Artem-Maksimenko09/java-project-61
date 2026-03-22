@@ -12,16 +12,12 @@ public class Prime {
     public static String getPrime(int randomNumber) {
         if (randomNumber < 2) {
             return "no";
-        } else if (randomNumber == 2) {
-            return "yes";
-        } else {
-            for (var i = 2; i < randomNumber / 2; i++) {
-                if (randomNumber % i == 0) {
-                    return "no";
-                }
+        } for (var i = 2; i <= randomNumber / 2; i++) {
+            if (randomNumber % i == 0) {
+                return "no";
             }
-            return "yes";
         }
+        return "yes";
     }
 
     public static String[][] primeArray() {
