@@ -40,7 +40,7 @@ This is the first project in the Java developer training. It is a set of five co
    ```
 2. Build the project using the command
    ```
-   ./gradlew build 
+   make build 
    ```
 3. Launch the game using the command
    ```
@@ -55,7 +55,7 @@ This is the first project in the Java developer training. It is a set of five co
    ```
 2. Выполните сборку проекта при помощи команды
    ```
-   ./gradlew build 
+   make build 
    ```
 3. Запустите игру при помощи команды
    ```
