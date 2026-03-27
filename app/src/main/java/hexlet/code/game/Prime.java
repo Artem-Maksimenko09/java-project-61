@@ -10,16 +10,16 @@ public class Prime {
     public static final String PRIMERULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static final int MAXRANDOM = 30;
 
-    public static String getPrime(int randomNumber) {
+    public static boolean isPrime(int randomNumber) {
         if (randomNumber < 2) {
-            return "no";
+            return false;
         }
         for (var i = 2; i <= randomNumber / 2; i++) {
             if (randomNumber % i == 0) {
-                return "no";
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 
     public static String[][] primeArray() {
@@ -29,7 +29,7 @@ public class Prime {
         for (var i = 0; i < ROUNDS; i++) {
             int randomNumber = random.nextInt(MAXRANDOM);
             questionAndAnswer[i][QUESTION] = String.valueOf(randomNumber);
-            questionAndAnswer[i][ANSWER] = getPrime(randomNumber);
+            questionAndAnswer[i][ANSWER] = isPrime(randomNumber) ? "yes" : "no";
         }
         return questionAndAnswer;
     }

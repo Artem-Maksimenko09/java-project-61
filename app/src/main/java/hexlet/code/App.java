@@ -25,19 +25,20 @@ public class App {
 
         switch (num) {
             case "1":  System.out.println("Welcome to the Brain Games!");
-                     Cli.gretting();
-                     break;
+                Cli.gretting();
+                break;
             case "2":  runEven();
-                     break;
+                break;
             case "3":  runCalc();
-                     break;
+                break;
             case "4":  runGcd();
-                     break;
+                break;
             case "5":  runProgression();
-                     break;
+                break;
             case "6":  runPrime();
-                     break;
-            default: break;
+                break;
+            default:   System.out.println("Unknown user choice: " + num);
+                break;
         }
 
         numGame.close();

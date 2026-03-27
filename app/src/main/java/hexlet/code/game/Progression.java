@@ -15,15 +15,30 @@ public class Progression {
     public static final int MINSTEPPROGRESSION = 3;
     public static final int MAXSTEPPROGRESSION = 7;
 
-    public static String[] getProgression() {
+    public static int startProgression() {
         Random random = new Random();
-        int lengthProgression = random.nextInt(MINLENGTHPROGRESSION, MAXLENGTHPROGRESSION);
-        String[] progressionArray = new String[lengthProgression];
         int start = random.nextInt(MINSTARTPROGRESSION, MAXSTARTPROGRESSION);
+        return start;
+    }
+
+    public static int stepProgression() {
+        Random random = new Random();
         int step = random.nextInt(MINSTEPPROGRESSION, MAXSTEPPROGRESSION);
+        return step;
+    }
+
+    public static int lengthProgression() {
+        Random random = new Random();
+        int length = random.nextInt(MINLENGTHPROGRESSION, MAXLENGTHPROGRESSION);
+        return length;
+    }
+
+    public static String[] getProgression(int start, int step, int length) {
+        Random random = new Random();
+        String[] progressionArray = new String[length];
         int nextElement = start;
 
-        for (var i = 0; i < lengthProgression; i++) {
+        for (var i = 0; i < length; i++) {
             progressionArray[i] = String.valueOf(nextElement);
             nextElement = nextElement + step;
         }
@@ -35,7 +50,7 @@ public class Progression {
         Random random = new Random();
 
         for (var i = 0; i < ROUNDS; i++) {
-            String[] progressionArray = getProgression();
+            String[] progressionArray = getProgression(startProgression(), stepProgression(), lengthProgression());
             int progressionArrayLength = progressionArray.length;
             int randomElement = random.nextInt(1, progressionArrayLength);
             questionAndAnswer[i][ANSWER] = progressionArray[randomElement];

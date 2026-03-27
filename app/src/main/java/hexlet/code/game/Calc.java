@@ -12,14 +12,18 @@ public class Calc {
     public static final int MAXRANDOMOPERATOR = 3;
 
     public static String randomOperator() {
+        String[] randomOperatorsArray = {"+", "-", "*"};
         Random random = new Random();
-        int randomNumOperator = random.nextInt(MAXRANDOMOPERATOR);
-        String operator = switch (randomNumOperator) {
-            case 0 -> "+";
-            case 1 -> "-";
-            default -> "*";
-        };
-        return operator;
+        return randomOperatorsArray[random.nextInt(MAXRANDOMOPERATOR)];
+    }
+
+    public static int calculate(int firstOperand, int secondOperand, String operator) {
+        switch (operator) {
+            case "+": return firstOperand + secondOperand;
+            case "-": return firstOperand - secondOperand;
+            case "*": return firstOperand * secondOperand;
+            default: return 0;
+        }
     }
 
     public static String[][] calcArray() {
@@ -29,23 +33,11 @@ public class Calc {
         for (var i = 0; i < ROUNDS; i++) {
             int randomNumberOne = random.nextInt(MAXRANDOM);
             int randomNumberTwo = random.nextInt(MAXRANDOM);
-            String randomChar = randomOperator();
-            if ("+".equals(randomChar)) {
-                int correctAnswerInt = randomNumberOne + randomNumberTwo;
-                questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
-                        + " + " + randomNumberTwo);
-                questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
-            } else if ("-".equals(randomChar)) {
-                int correctAnswerInt = randomNumberOne - randomNumberTwo;
-                questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
-                        + " - " + randomNumberTwo);
-                questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
-            } else if ("*".equals(randomChar)) {
-                int correctAnswerInt = randomNumberOne * randomNumberTwo;
-                questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
-                        + " * " + randomNumberTwo);
-                questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
-            }
+            String randomOperator = randomOperator();
+            int correctAnswerInt = calculate(randomNumberOne, randomNumberTwo, randomOperator);
+            questionAndAnswer[i][QUESTION] = String.valueOf(randomNumberOne
+                    + " " + randomOperator + " " + randomNumberTwo);
+            questionAndAnswer[i][ANSWER] = String.valueOf(correctAnswerInt);
         }
         return questionAndAnswer;
     }
