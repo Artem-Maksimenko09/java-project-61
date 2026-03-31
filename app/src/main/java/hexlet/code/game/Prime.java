@@ -1,0 +1,41 @@
+package hexlet.code.game;
+
+import java.util.Random;
+import static hexlet.code.Engine.ROUNDS;
+import static hexlet.code.Engine.QUESTION;
+import static hexlet.code.Engine.ANSWER;
+import static hexlet.code.Engine.engine;
+
+public class Prime {
+    public static final String PRIMERULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static final int MAXRANDOM = 30;
+
+    public static boolean isPrime(int randomNumber) {
+        if (randomNumber < 2) {
+            return false;
+        }
+        for (var i = 2; i <= randomNumber / 2; i++) {
+            if (randomNumber % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static String[][] primeArray() {
+        Random random = new Random();
+        String[][] questionAndAnswer = new String[ROUNDS][2];
+
+        for (var i = 0; i < ROUNDS; i++) {
+            int randomNumber = random.nextInt(MAXRANDOM);
+            questionAndAnswer[i][QUESTION] = String.valueOf(randomNumber);
+            questionAndAnswer[i][ANSWER] = isPrime(randomNumber) ? "yes" : "no";
+        }
+        return questionAndAnswer;
+    }
+
+    public static void runPrime() {
+        String[][] questionAndAnswer = primeArray();
+        engine(questionAndAnswer, PRIMERULES);
+    }
+}
