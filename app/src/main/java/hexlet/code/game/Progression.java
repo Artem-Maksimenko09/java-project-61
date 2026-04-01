@@ -34,7 +34,6 @@ public class Progression {
     }
 
     public static String[] getProgression(int start, int step, int length) {
-        Random random = new Random();
         String[] progressionArray = new String[length];
         int nextElement = start;
 
