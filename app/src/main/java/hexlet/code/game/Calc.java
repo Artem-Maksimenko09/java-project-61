@@ -22,7 +22,7 @@ public class Calc {
             case "+": return firstOperand + secondOperand;
             case "-": return firstOperand - secondOperand;
             case "*": return firstOperand * secondOperand;
-            default: return 0;
+            default: throw new RuntimeException("Unknown user input " + operator);
         }
     }
 
