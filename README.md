@@ -39,30 +39,30 @@ This is the first project in the Java developer training. It is a set of five co
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Artem-Maksimenko09_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Artem-Maksimenko09_java-project-61)
 ### Launch Instructions: / Инструкция по запуску:
 1. Clone the repository using the command
-   
-   git clone git@github.com:Artem-Maksimenko09/java-project-61.git
-   
+   ```
+   git clone git@github.com:Artem-Maksimenko09/java-project-61.git```
+   ```
 2. Build the project using the command
-   
+   ```
    make build 
-   
+   ```
 3. Launch the game using the command
-   
+   ```
    make run-dist
-   
+   ```
 4. Enjoy the game and train your brain!
 <br>
 
 1. Склонируйте репозиторий при помощи команды
-   
+   ```
    git clone git@github.com:Artem-Maksimenko09/java-project-61.git
-   
+   ```
 2. Выполните сборку проекта при помощи команды
-   
+   ```
    make build 
-   
+   ```
 3. Запустите игру при помощи команды
-   
+   ```
    make run-dist
-   
+   ```
 4. Наслаждайтесь игрой и прокачивайте мозги!
