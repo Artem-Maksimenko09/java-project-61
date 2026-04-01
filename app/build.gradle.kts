@@ -5,6 +5,9 @@ plugins {
     id("org.sonarqube") version "7.2.3.7755"
 }
 
+checkstyle {
+    toolVersion = "10.12.4"
+}
 
 sonar {
     properties {
