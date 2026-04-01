@@ -1,7 +1,3 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Artem-Maksimenko09/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artem-Maksimenko09/java-project-61/actions)
-
-
 # The Brain Games Project / Проект "Игры разума"
 ### Description / Описание
 This is the first project in the Java developer training. It is a set of five console games for quick wit and logic. When you click on the link, you will see a video demonstration of each game:
